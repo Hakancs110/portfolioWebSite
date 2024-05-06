@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/article.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column"></div>
+        <div class="middle-column">
+            <div class="article">
+                <div  class="icerik">
+ <!-- --------------------------------------------------------------------------------- -->
+
+                    <div id = "konu1" class = "topic">
+                        <div class="headerOfTopic">
+                            <h1>#Character Animation</h1>
+                        </div>
+                        <p class="pf">solid character animation video</p>
+                        <video width="400" controls>
+                            <source src="\saxophonist\Process\Asset Development\Characters\Saxophonist\GreasePencilDetails/03.webm" type="video/mp4">
+
+                          Your browser does not support the video tag.
+                          </video>
+
+                        <p class="pf">timeline photo</p>
+                        <img src="\saxophonist\Process\Asset Development\Animation\characterAnimation/02_timeline.png" alt="">
+
+                        <p class="pf">I had the idea of a stop-motion style for the animation, but I had no idea how to execute it. I completed the animation with abrupt transitions, and it doesn't look natural when the character sits and stands up. I attribute this issue to a lack of references. I should have taken my own references and started the animation with them. Since I did the grease pencil animation on the character's face and around the feet by myself, I can't make significant changes in the character animation. I've made corrections where I thought necessary, but due to time constraints, I have to complete the project in its current state.</p>
+
+
+                    </div>
+                    
+                    
+                    <div id = "konu2" class = "topic">
+                        <div class="headerOfTopic">
+                            <h1>#Grease Pencil Animation</h1>
+                        </div>
+
+                        <p class="pf">I attempted frame by frame animation with the grease pencil on the face, around the saxophone, and around the feet. I'm pleased with the result. I believe it adds a lot to the scene.</p>
+                        <p class="pf">I added grease pencil details around the saxophone since I didn't include any sound.</p>
+                        <video width="400"  controls>
+                            <source src="\saxophonist\Process\Asset Development\Animation\greasePencilAnimation/01_faceAnimation.webm" type="video/mp4">
+
+                          Your browser does not support the video tag.
+                          </video>
+                          <video width="400" controls>
+                            <source src="\saxophonist\Process\Asset Development\Animation\greasePencilAnimation/01_greasePencilAnimation.webm" type="video/mp4">
+
+                          Your browser does not support the video tag.
+                          </video>
+                          <p class="pf">
+                            Grease pencil adds a lot to the scene, but if I'm animating frame by frame manually, the project needs to be well-planned from the beginning. Otherwise, a sudden change can disrupt the entire animation. Grease pencil can be used very effectively. I'm considering exploring Grease pencil more in future projects.</p>
+                        </p>
+                        <img src="\saxophonist\Process\Asset Development\Animation\greasePencilAnimation/03.png" alt="">
+
+                    </div>
+
+
+
+                    <!-- --------------------------------------------------------------------------------- -->
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+        </div>
+        </div>
+        </div>
+        <div class="right-column">
+            <ul class="konu-listesi">
+                <li class="topicHeader"><a href="">Animations</a></li>
+                <li><a href="#konu1">Character Animation</a></li>
+                <li><a href="#konu2">Grease Pencil Animation</a></li>
+              </ul>
+        </div>
+      </div>
+</body>
+<script>
+var foundElementId = "";
+
+function findTopmostElementWithClass(className) {
+  var allElements = document.querySelectorAll('.' + className);
+
+  for (var i = 0; i < allElements.length; i++) {
+    var element = allElements[i];
+    var bounding = element.getBoundingClientRect();
+
+    if (bounding.top >= 0 && bounding.top<30) {
+      foundElementId = element.id;
+      console.log("Ekranın en üstündeki ." + className + " sınıfına sahip elementin ID'si: ", foundElementId);
+
+      // Tüm li elemanlarını seç
+      var allLiElements = document.querySelectorAll('.konu-listesi li a');
+      
+      // Tüm li elemanlarının rengini orijinal renklerine döndür
+      allLiElements.forEach(function(liElement) {s
+        if (liElsssssement.getAttribute('href') !== '#' + foundElementId) {
+          liElement.style.backgroundColor = ''; // Diğer elemanların rengini boş bırakarak orijinal renklerine döndür
+        }
+      });
+
+      // Bulunan ID'ye sahip li elemanının rengini değiştirme
+      var liElement = document.querySelector('.konu-listesi li a[href="#' + foundElementId + '"]');
+      if (liElement) {
+        liElement.style.backgroundColor = 'red'; // Örnek olarak rengi kırmızı olarak değiştiriyoruz
+      }
+
+      break;
+    }
+  }
+}
+
+window.addEventListener('scroll', function() {
+  findTopmostElementWithClass('topic');
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  findTopmostElementWithClass('topic');
+});
+</script>
+
+</html>

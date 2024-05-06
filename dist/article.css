@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+  font-family:fantasy ;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: black;
+  height: 100vh;
+}
+
+.konu-listesi {
+list-style: none;
+background-color: #163020;
+border-radius: 10px;
+}
+
+.konu-listesi li {
+margin-bottom: 10px;
+transition: color 0.3s; /* Geçiş efekti için */
+padding: 5px;
+}
+
+.konu-listesi a {
+text-decoration: none;
+color: rgb(163, 196, 120); /* Başlangıçta siyah renk */
+display: block;
+}
+
+.konu-listesi a:hover {
+background-color: #ccc; /* Fare üzerine gelindiğinde arka plan rengi değiştirme */
+}
+.sag-sutun{
+  flex: 20%;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+div.topic{
+  background-color: #FAF6F0;
+  padding: 30px;
+  padding-right:10px ;
+  margin: 10px;
+  border-radius: 10px;
+}
+.headerOfTopic
+{
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  position: relative; /* Container'a göre pozisyonlamak için */
+}
+
+.left-column,
+.right-column {
+  width: 250px; /* Sabit genişlik belirlendi */
+  position: fixed; /* Sabit konumlandırma */
+  top: 0;
+  bottom: 0;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  left: 0;
+  background-color: #000000; /* Örnek renk */
+}
+
+.right-column {
+  right: 0;
+  background-color: #F4DFC8; /* Örnek renk */
+}
+
+.middle-column {
+  flex: 1; /* Esnek genişlik, orta sütunu diğerleriyle doldurur */
+  padding: 20px;
+  margin-left: 250px; /* Sabit genişlikteki sütunlar için yer açar */
+  margin-right: 250px; /* Sabit genişlikteki sütunlar için yer açar */
+  background-color: #F4EAE0; /* Örnek renk */
+  position: relative; /* Diğer sabit sütunların üzerine gelmeyecek */
+  z-index: 0; /* Diğer sabit sütunların üzerine çıkacak */
+  
+
+}
+
+/* Tablet boyutu için medya sorgusu */
+@media screen and (max-width: 860px) {
+  .left-column {
+    display: none; /* Sol sütunu gizle */
+  }
+  
+  .right-column {
+      width: 200px;
+  }
+  
+  .middle-column {
+    margin-left: 0; /* Sabit genişlikteki sütunlar için yer açan margin'leri kaldır */
+    margin-right: 200px;
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img{
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 100%;
+}
+.topic{
+  padding: 5%;
+}
+
+.pf{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  padding: 15px;
+  background-color: #c5986a99;
+
+}
+
+.topicHeader{
+  background-color: #000000;
+  height: 50px;
+}

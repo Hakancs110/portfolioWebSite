@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/article.css">
+    <link rel="stylesheet" href="/article1.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-column"></div>
+        <div class="middle-column">
+            <div class="icerik">
+                <div id = "konu1" class = "topic">
+                    <div class="headerOfTopic">
+                        <h1>#Composition</h1>
+                    </div>
+                    <img src="\saxophonist\Process\Asset Development\Composition/01.png" alt="">
+                    <p class="pf">
+                        In this project, my initial goal was to convey the entire story within a small frame using the composition I had in mind, and to reduce the level of detail by adding only a few brush strokes to the background. When the project was completed, it cannot be said that I fully achieved my original goal. However, I made some changes to the plan, decided to add the remaining elements of the environment to the background, and reduce the level of detail in different ways. This way, the environment was better conveyed.                        
+                    </p>
+                    <p class="pf">
+                        I attempted to achieve this goal with volumetric cubes, and I was very pleased with the result.                        
+                    </p>
+                    <p class="pf">
+                        I tried to keep the scene as simple as possible. My perception of unlimited time and resources in previous projects was leading to an increasing complexity of the project. While complexity can be beneficial to a project up to a certain point, beyond that point, it causes both the project and myself to experience fatigue.                        
+                    </p>
+                    <p class="pf">
+                        Therefore, in this project, the top priority was time constraints. I may have exceeded my time a bit while writing these lines, but I can still say that the limitation was beneficial for me. It maintained the simplicity of the project, and I also preserved my mental well-being :D.                        
+                    </p>
+                    <p class="pf">
+                        Only difference between the light scene composition and night scene compoisition is the background props.
+                    </p>
+        
+                </div>
+
+                <div id = "konu2" class = "topic">
+                    <div class="headerOfTopic">
+                        <h1>#Day Scene Lighting</h1>
+                    </div>
+                    <p class="pf">
+                        I used 10 spotlights in the bright scene. The only difference between the bright scene and the dark scene is that the world light strength is stronger.
+                    </p>
+        
+                </div>
+        
+                <div id = "konu3" class = "topic">
+                    <div class="headerOfTopic">
+                        <h1>#Night Scene Lighting</h1>
+                    </div>
+                    <p class="pf">
+                        I used 10 spotlights for the dark scene to provide ambient lighting. The light intensity on the character is much stronger compared to the other 9 lights. I opted for yellow lights as I wanted a warm overall ambiance.                        </p>
+        
+                    <img src="\saxophonist\Process\Asset Development\Lighting\NightSceneIllumination/01.png" alt="">
+                    <img src="\saxophonist\Process\Asset Development\Lighting\NightSceneIllumination/02.png" alt="">
+                    <img  src="\saxophonist\Process\Asset Development\Lighting\NightSceneIllumination/03.png" alt="">
+                    <img  src="\saxophonist\Process\Asset Development\Lighting\NightSceneIllumination/04.png" alt="">
+                </div>
+
+        
+                <!-- --------------------------------------------------------------------------------- -->
+        
+                <div id = "konu4" class = "topic">
+                    <div class="headerOfTopic">
+                        <h1>#Post Processing</h1>
+                    </div>
+                    <img src="\saxophonist\Process\Asset Development\PostProcessing/01.png" alt="">
+                    <img src="\saxophonist\Process\Asset Development\PostProcessing/02_01.png" alt="">
+                    <img src="\saxophonist\Process\Asset Development\PostProcessing/02_02.png" alt="">
+        
+                    <p class="pf">
+                        I did not apply any post-processing to the bright scene.                        
+                    </p>
+                </div>
+                <div id = "konu5" class = "topic">
+                    <div class="headerOfTopic">
+                        <h1>#Rendering</h1>
+                    </div>
+                    <img src="\saxophonist\Process\Asset Development\Rendering/01.png" alt="">
+                    <img src="\saxophonist\Process\Asset Development\Rendering/02.png" alt="">
+                    <p class="pf">
+                        When rendering my initial frames, it was taking 7-8 hours to render 780 frames. I suspect this extended duration is due to Grease Pencil. I haven't baked Grease Pencil yet.
+                    </p>
+        
+        
+        
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+        <ul class="konu-listesi">
+            <li class="topicHeader"><a href="">COMPOSITION</a></li>
+            <li><a href="#konu1">Composition</a></li>
+        
+            <li class="topicHeader"><a href="">LIGHTING</a></li>
+            <li><a href="#konu2">Day Time Illumination</a></li>
+            <li><a href="#konu3">Night Time Illumination</a></li>
+        
+            <li class="topicHeader"><a href="">POST PROCESSING</a></li>
+            <li><a href="#konu4">Night Scene Post Processing</a></li>
+        
+        
+            <li class="topicHeader"><a href="">RENDERING</a></li>
+            <li><a href="#konu5">Rendering</a></li>
+        
+          </ul>
+        
+        
+        
+        </div>
+</body>
+<script>
+var foundElementId = "";
+
+function findTopmostElementWithClass(className) {
+  var allElements = document.querySelectorAll('.' + className);
+
+  for (var i = 0; i < allElements.length; i++) {
+    var element = allElements[i];
+    var bounding = element.getBoundingClientRect();
+
+    if (bounding.top >= 0 && bounding.top<30) {
+      foundElementId = element.id;
+      console.log("Ekranın en üstündeki ." + className + " sınıfına sahip elementin ID'si: ", foundElementId);
+
+      // Tüm li elemanlarını seç
+      var allLiElements = document.querySelectorAll('.konu-listesi li a');
+      
+      // Tüm li elemanlarının rengini orijinal renklerine döndür
+      allLiElements.forEach(function(liElement) {
+        if (liElement.getAttribute('href') !== '#' + foundElementId) {
+          liElement.style.backgroundColor = ''; // Diğer elemanların rengini boş bırakarak orijinal renklerine döndür
+        }
+      });
+
+      // Bulunan ID'ye sahip li elemanının rengini değiştirme
+      var liElement = document.querySelector('.konu-listesi li a[href="#' + foundElementId + '"]');
+      if (liElement) {
+        liElement.style.backgroundColor = 'red'; // Örnek olarak rengi kırmızı olarak değiştiriyoruz
+      }
+
+      break;
+    }
+  }
+}
+
+window.addEventListener('scroll', function() {
+  findTopmostElementWithClass('topic');
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  findTopmostElementWithClass('topic');
+});
+</script>
+
+</html>

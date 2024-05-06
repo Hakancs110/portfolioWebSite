@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FEFAE0;
+    height: 100vh;
+}
+
+.indexGridItem{
+    flex: 33%;
+    width: 33%;
+    max-width: 33%;
+    padding: 5px;
+    
+}
+
+.indexGridItem{
+    flex: 33%;
+    width: 33%;
+    max-width: 33%;
+    padding: 5px;
+    
+}
+.indexGridContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainimage{
+    width: 100%;
+}
+.indexGridItem-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+.indexGridItem:hover{
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform .25s cubic-bezier(.23,1,.32,1);
+
+}
+
+.foldericon{
+    width: 100%;
+    position: relative;
+    text-align: right;
+}
+.hidden img{
+    visibility:hidden;
+}
+    .foldericon img{
+        width: 30%;
+    }
+.label-container{
+    position: relative;
+    color: white;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.379);
+    top: 60%;
+    height: 15%;
+    text-align: center;
+
+
+}
+.label{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.indexGridItemContainer{
+    position: relative;
+}
+img{
+    border-radius: 20px;
+}
+
+ @media ((min-width: 0px) and (max-width: 500px)) {
+    .indexGridItem{
+        flex: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+  }
+  @media ((max-width: 600px)) {
+    .folderContainer-Container{
+        display: none;
+    }
+    .cards-2{
+        width: 100%;
+        flex: 100%;
+    }
+
+
+
+  }
+
+  @media ((min-width: 500px) and (max-width: 800px)) {
+
+        .indexGridItem{
+            flex: 50%;
+            width: 50%;
+            max-width: 50%;
+
+        }
+  
+  }
+  @media ((min-width: 800px) and (max-width: 1000px)) {
+
+        .indexGridItem{
+            flex: 50%;
+            width: 50%;
+            max-width: 50%;
+
+        }
+
+  }
+    .folderStructure{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  .folderContainer{
+        background-color:#A9B388;
+        position: sticky;
+        top: 0;
+        display: block;
+        width: 100%;
+  }
+  .folderContainer-Container{
+    flex:25%;
+    width: 25%;
+    position: relative;
+    padding: 20px;
+  }
+    .folder{
+        display: block;
+        width: 100%;
+        background-color: blue;
+        border-radius: 5px;
+        min-height: 50px;
+    }
+    .cards-2{
+        flex:75%;
+        width: 75%;
+        background-color: blueviolet;
+    }
+    .folderStructure{
+        padding: 5%;
+    }
+
+    /* FOLDER LABELS */
+    .breadcrumb-item{
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+    }
+    .active{
+        background-color: black;
+    }
+    
+    .overall{
+        display: flex;
+
+    }
+    .headerContainer{
+        position: relative;
+        display: block;
+        flex: 75%;
+        width: 75%;
+        background-color: black;
+        min-height: 50px;
+        color: white;
+    }
+    .subHeaderContainer{
+        position: relative;
+        display: block;
+        flex: 75%;
+        width: 75%;
+        background-color: rgb(142, 47, 47);
+        min-height: 50px;
+        color: white;
+    }
+    .header{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        margin-left: 5px;
+    }
+    .collapseButton{
+        flex:25%;
+        width: 25%;
+        background-color: #5F6F52;
+    }
+.as{
+    width: 100%;
+    text-align: center;
+}
+.card-body{
+    padding: 0;
+    background-color: black;
+    border-radius: 0;
+}
+.as img{
+    width: 100%;
+}
+
+.folderIcon{
+    width: 20%;
+    position: relative;
+    display: block;
+    background-color: rgba(240, 248, 255, 0.26);
+}
+.folderIcon img{
+    top: 50%;
+    position: relative;
+    display: block;
+    transform: translateY(-50%);
+}
+.cards-2{
+    background-color: #A9B388;
+}
+
+li{
+    background-color: #5F6F52;
+    min-height: 50px;
+    margin: 0 0 10px 0;
+}
+li:hover{
+    background-color: #1F6F70;
+}
+li{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px;
+    color:white;
+    
+}
